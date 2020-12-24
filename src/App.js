@@ -4,25 +4,50 @@ import BookList from './BookList.js';
 import AddBook from './AddBook.js';
 import UpdateBook from './UpdateBook.js';
 import DeleteBook from './DeleteBook.js';
-
-
-
-
+import Home from './Home.js';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <div width={'100%'}style={{backgroundColor: "blue"}}>
-      <h1 style={{color: "black"}}>OAMK Library</h1>
-      </div>
-      <DeleteBook/>
-      <AddBook/>
-      <UpdateBook/>
-      <div>
-      <BookList/>
-      </div>
-    </div>
-  );
+
+return (
+
+<Router>
+  <div className="App">
+      <div style={{backgroundColor: "#F58401", padding: '60px'}}>
+        <ul>
+            <div style={{fontSize: '25px'}}><Link to="/">HOME</Link></div>
+
+            <div><Link to="/addBook">ADD BOOK</Link></div>
+
+            <div><Link to="/deleteBook">DELETE BOOK</Link></div>
+
+            <div><Link to="/updateBook">UPDATE BOOK</Link></div>
+        </ul>
+        </div>
+        <Switch>
+          <Route path="/addBook">
+            <AddBook />
+          </Route>
+          <Route path="/deleteBook">
+            <DeleteBook />
+          </Route>
+          <Route path="/updateBook">
+            <UpdateBook />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+
+  </div>
+</Router>
+)
 }
 
 export default App;
