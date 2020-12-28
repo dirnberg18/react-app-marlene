@@ -16,7 +16,9 @@ const Home = () => {
                 </div>
                 <div>
                     <h1>Booklist</h1>
-                    <BookList />
+                    <div> 
+                        <BookList />
+                    </div>
                 </div>
             </div>
         )

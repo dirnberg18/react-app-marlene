@@ -23,18 +23,18 @@ import apiURL from './myURL';
       render() {
         return (
             <div>
-                <ul>
+                
                 {this.state.book.map(book => (
                     <li key={book.id}>
+                     <br/>
+                       <b>Book ID: </b>{book.id} <br/>
+                       <b>Book Name: </b> {book.name} <br/>
+                       <b>Author: </b> {book.author} <br/>
+                       <b>ISBN: </b> {book.isbn} <br/>
                       <br/>
-                       Book ID: {book.id} <br/>
-                       Book Name: {book.name} <br/>
-                       Author: {book.author} <br/>
-                       ISBN: {book.isbn} <br/>
-                       <br/>
                     </li>
                 ))}
-                </ul>
+                
             </div>
         );
     }
