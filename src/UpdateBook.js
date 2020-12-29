@@ -12,7 +12,7 @@ import React, { Component } from 'react';
       this.updateInputValue = this.updateInputValue.bind(this);
       this.state = {
         id: 1,
-        name: '',
+        bookname: '',
         author: '',
         isbn:''
       };
@@ -30,10 +30,10 @@ import React, { Component } from 'react';
     handleSubmit = event => {
       event.preventDefault();
       const id = this.state.id;
-      const { name, author, isbn } = this.state;
+      const { bookname, author, isbn } = this.state;
 
       axios
-        .put(apiURL+'/book/' + id, { name, author, isbn
+        .put(apiURL+'/book/' + id, { bookname, author, isbn
           })
         .then(res => {
           console.log(res);
@@ -54,7 +54,7 @@ import React, { Component } from 'react';
           <form onSubmit={this.handleSubmit}>
             <label>
               Name:
-              <input type="text" name="name" value={this.state.className}  onChange={this.onChange}/>
+              <input type="text" name="bookname" value={this.state.className}  onChange={this.onChange}/>
             </label>
             <label>
               Author:

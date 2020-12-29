@@ -28,7 +28,7 @@ import apiURL from './myURL';
                     <li key={book.id}>
                      <br/>
                        <b>Book ID: </b>{book.id} <br/>
-                       <b>Book Name: </b> {book.name} <br/>
+                       <b>Book Name: </b> {book.bookname} <br/>
                        <b>Author: </b> {book.author} <br/>
                        <b>ISBN: </b> {book.isbn} <br/>
                       <br/>

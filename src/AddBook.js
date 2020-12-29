@@ -10,7 +10,7 @@ class AddBook extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       id: '',
-      name: '',
+      bookname: '',
       author: '',
       isbn: ''
     };
@@ -25,10 +25,10 @@ class AddBook extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    const { name, author, isbn } = this.state;
+    const { bookname, author, isbn } = this.state;
 
     axios
-      .post(apiURL+'/book', { name, author, isbn })
+      .post(apiURL+'/book', { bookname, author, isbn })
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -45,7 +45,7 @@ class AddBook extends Component {
         <form onSubmit={this.handleSubmit}>
             <label>
             Name:
-            <input type="text" name="name" onChange={this.onChange} />
+            <input type="text" name="bookname" onChange={this.onChange} />
             </label>
             <label>
             Author:
