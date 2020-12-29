@@ -14,12 +14,6 @@ const Home = () => {
                 <div>
                     <img src={logo} alt="Logo" width={'50%'} />
                 </div>
-                <div>
-                    <h1>Booklist</h1>
-                    <div> 
-                        <BookList />
-                    </div>
-                </div>
             </div>
         )
     }
